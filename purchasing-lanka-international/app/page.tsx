@@ -10,8 +10,8 @@ export default function Home() {
           <Image 
             src="/purchselankalogo.jpg" 
             alt="Purchasing Lanka International Logo" 
-            width={200} 
-            height={80}
+            width={500} 
+            height={200}
             className="mx-auto"
           />
         </div>
@@ -86,10 +86,10 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-gray-900 p-6 rounded-lg shadow hover:scale-105 transition">
             <div className="h-40 bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
-              <Image src="/cargils.jpg" alt="Food City" width={120} height={60} />
+              <Image src="/supercity.webp" alt="Food City" width={120} height={60} />
             </div>
-            <h3 className="text-white text-xl mb-2">Cargills Food City</h3>
-            <p className="text-gray-400">Get fresh produce and groceries from Sri Lanka's leading supermarket chain.</p>
+            <h3 className="text-white text-xl mb-2">Super City</h3>
+            <p className="text-gray-400">Get fresh groceries from Sri Lanka's leading supermarket chain.</p>
           </div>
           <div className="bg-gray-900 p-6 rounded-lg shadow hover:scale-105 transition">
             <div className="h-40 bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
@@ -132,7 +132,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="text-white font-semibold">Kalani D.</h4>
-                <p className="text-gray-400">Colombo</p>
+                <p className="text-gray-400">Colombo 7</p>
               </div>
             </div>
             <p className="text-gray-300 italic">
@@ -151,8 +151,8 @@ export default function Home() {
                 />
               </div>
               <div>
-                <h4 className="text-white font-semibold">Rohan M.</h4>
-                <p className="text-gray-400">Pilyandala</p>
+                <h4 className="text-white font-semibold">Anjana R.</h4>
+                <p className="text-gray-400">Colombo 5</p>
               </div>
             </div>
             <p className="text-gray-300 italic">
@@ -172,7 +172,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="text-white font-semibold">Priya D.</h4>
-                <p className="text-gray-400">Kandy</p>
+                <p className="text-gray-400">Colombo 3</p>
               </div>
             </div>
             <p className="text-gray-300 italic">
@@ -191,8 +191,8 @@ export default function Home() {
                 />
               </div>
               <div>
-                <h4 className="text-white font-semibold">Ajith S.</h4>
-                <p className="text-gray-400">Negombo</p>
+                <h4 className="text-white font-semibold">Aruvi S.</h4>
+                <p className="text-gray-400">Colombo 4</p>
               </div>
             </div>
             <p className="text-gray-300 italic">

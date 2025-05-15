@@ -11,7 +11,12 @@ export default function Navbar() {
       <div className="space-x-6">
         <Link href="/" className="text-white hover:text-gray-300">Home</Link>
         <Link href="/about" className="text-white hover:text-gray-300">About</Link>
+        <Link href="/products" className="text-white hover:text-gray-300">Products</Link>
+        <Link href="/cart" className="text-white hover:text-gray-300">Cart</Link>
+        <Link href="/supermarkets" className="text-white hover:text-gray-300">Supermarkets</Link>
+        <Link href="/checkout" className="text-white hover:text-gray-300">Checkout</Link>
         <Link href="/contact" className="text-white hover:text-gray-300">Contact</Link>
+
       </div>
     </nav>
   );

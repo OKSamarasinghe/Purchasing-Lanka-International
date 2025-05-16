@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-black shadow-md">
+    <nav className="flex items-center justify-between px-6 py-4 bg-gray-950 shadow-md">
       <div className="flex items-center space-x-3">
         <Image src="/logo.png" alt="Logo" width={40} height={40} />
         <span className="text-white text-2xl font-semibold">Purchasing Lanka International </span>

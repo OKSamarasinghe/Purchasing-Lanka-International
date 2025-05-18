@@ -149,7 +149,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 Purchasing Lanka International. All rights reserved.
+            © 2025 Oshadha Samarasinghe. All rights reserved.
           </div>
           <div className="flex space-x-6">
             <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition">

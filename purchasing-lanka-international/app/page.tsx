@@ -18,6 +18,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // Default as mobile for server rendering
 
   // Auto-advance carousel
   useEffect(() => {
@@ -26,6 +27,19 @@ export default function Home() {
     }, 4000);
     
     return () => clearInterval(timer);
+  }, []);
+
+  // Check for window size and update mobile state
+  useEffect(() => {
+    // Set initial state based on client-side window
+    setIsMobile(window.innerWidth < 768);
+    
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   // Scroll detection for animations
@@ -75,6 +89,24 @@ export default function Home() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
+  // Function to determine if a product should be visible in carousel
+  const shouldShowProduct = (index: number) => {
+    if (index === currentSlide) return true;
+    
+    if (!isMobile) {
+      // On desktop, show additional slides
+      if (
+        index === (currentSlide + 1) % featuredProducts.length || 
+        index === (currentSlide + 2) % featuredProducts.length || 
+        index === (currentSlide + 3) % featuredProducts.length
+      ) {
+        return true;
+      }
+    }
+    
+    return false;
+  };
+
   return (
     <section className="px-4 md:px-16 py-16 bg-black">
       <div className="max-w-6xl mx-auto"> {/* Added container for consistent width */}
@@ -85,6 +117,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          {/* Your hero section content (unchanged) */}
           <div className="flex justify-center mb-8">
             <Image 
               src="/purchselankalogo.jpg" 
@@ -166,16 +199,12 @@ export default function Home() {
               </svg>
             </button>
             
-            {/* Products grid (instead of overflow) */}
+            {/* Products grid (instead of overflow) - FIXED VERSION */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {featuredProducts.map((product, index) => (
                 <div 
                   key={product.id} 
-                  className={`${index === currentSlide || (window.innerWidth >= 768 && (
-                    index === (currentSlide + 1) % featuredProducts.length || 
-                    index === (currentSlide + 2) % featuredProducts.length || 
-                    index === (currentSlide + 3) % featuredProducts.length
-                  )) ? 'block' : 'hidden md:block'}`}
+                  className={shouldShowProduct(index) ? 'block' : 'hidden md:block'}
                 >
                   <Link href={`/products?id=${product.id}`}>
                     <div className="bg-gray-900 rounded-lg overflow-hidden hover:shadow-xl transition cursor-pointer group h-full">
@@ -299,7 +328,7 @@ export default function Home() {
             <div className="mb-6 md:mb-0">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">First Order Special</h2>
               <p className="text-gray-300 text-lg mb-3">Get 10% off on your first order!</p>
-              <p className="text-gray-400">Use code: <span className="text-white font-bold">WELCOME10</span></p>
+              <p className="text-gray-400">Use code: <span className="text-white font-bold">WELCOME-TO-PLI</span></p>
             </div>
             <Link href="/products">
               <motion.button 

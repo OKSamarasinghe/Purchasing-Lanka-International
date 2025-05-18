@@ -49,7 +49,7 @@ export default function Navbar() {
     { name: 'About', path: '/about' },
     { name: 'Products', path: '/products' },
     { name: 'Supermarkets', path: '/supermarkets' },
-    { name: 'Checkout', path: '/checkout' },
+    { name: 'Blogs', path: '/blogs' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -80,7 +80,7 @@ export default function Navbar() {
             />
           </div>
           <span className="text-white text-lg font-semibold hidden sm:inline-block">
-            Purchasing Lanka
+            Purchasing Lanka International
           </span>
         </Link>
 

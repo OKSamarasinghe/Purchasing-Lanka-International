@@ -112,7 +112,7 @@ export default function AboutPage() {
             <div className="prose prose-lg prose-invert max-w-none">
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
                 <span className="font-semibold text-white">Purchasing Lanka International</span> acts as a trusted middleman between customers and top supermarket
-                chains in Sri Lanka. Founded in 2023, we have quickly become the preferred shopping assistant
+                chains in Sri Lanka. Founded in 2017, we have quickly become the preferred shopping assistant
                 for busy professionals and families across Colombo and surrounding areas.
               </p>
               

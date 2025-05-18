@@ -110,8 +110,8 @@ export default function Footer() {
             </ul>
             <div className="mt-4">
               <h4 className="text-white font-medium mb-2">Business Hours</h4>
-              <p className="text-gray-400 text-sm">Monday - Friday: 8:00 AM - 8:00 PM</p>
-              <p className="text-gray-400 text-sm">Saturday - Sunday: 9:00 AM - 6:00 PM</p>
+              <p className="text-gray-400 text-sm">Monday - Friday: 8:00AM - 8:00PM</p>
+              <p className="text-gray-400 text-sm">Saturday - Sunday: 9:00AM - 6:00PM</p>
             </div>
           </div>
 

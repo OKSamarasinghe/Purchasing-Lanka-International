@@ -74,7 +74,7 @@ export default function ProfilePage() {
       paymentMethod: 'Credit Card',
       items: [
         { id: 1, name: 'Basmati Rice 5kg', price: 1800.00, quantity: 1, image: '/rice.jpg' },
-        { id: 2, name: 'Fresh Milk 1L', price: 350.00, quantity: 2, image: '/milk.jpg' },
+        { id: 2, name: 'Fresh Milk 1L', price: 350.00, quantity: 2, image: '/milk.png' },
         { id: 3, name: 'Eggs (Pack of 10)', price: 450.00, quantity: 1, image: '/eggs.jpg' },
         { id: 4, name: 'Chicken Breast 500g', price: 1600.00, quantity: 1, image: '/chicken.jpg' }
       ]
@@ -88,9 +88,9 @@ export default function ProfilePage() {
       paymentMethod: 'Cash on Delivery',
       items: [
         { id: 5, name: 'Red Rice 5kg', price: 1500.00, quantity: 1, image: '/redrice.jpg' },
-        { id: 6, name: 'Coconut Oil 750ml', price: 750.00, quantity: 1, image: '/oil.jpg' },
-        { id: 7, name: 'Carrot 500g', price: 250.00, quantity: 2, image: '/carrot.jpg' },
-        { id: 8, name: 'Tomatoes 500g', price: 350.00, quantity: 1, image: '/tomato.jpg' }
+        { id: 6, name: 'Coconut Oil 750ml', price: 750.00, quantity: 1, image: '/oil.jpeg' },
+        { id: 7, name: 'Carrot 500g', price: 250.00, quantity: 2, image: '/carrot.jpeg' },
+        { id: 8, name: 'Tomatoes 500g', price: 350.00, quantity: 1, image: '/tomato.webp' }
       ]
     },
     {
@@ -101,10 +101,10 @@ export default function ProfilePage() {
       supermarket: 'Arpico',
       paymentMethod: 'Credit Card',
       items: [
-        { id: 9, name: 'Sugar 1kg', price: 350.00, quantity: 1, image: '/sugar.jpg' },
-        { id: 10, name: 'Noodles Pack', price: 200.00, quantity: 5, image: '/noodles.jpg' },
-        { id: 11, name: 'Washing Powder 1kg', price: 750.00, quantity: 1, image: '/washing.jpg' },
-        { id: 12, name: 'Ceylon Tea 400g', price: 650.00, quantity: 1, image: '/tea.jpg' }
+        { id: 9, name: 'Sugar 1kg', price: 350.00, quantity: 1, image: '/sugar.webp' },
+        { id: 10, name: 'Noodles Pack', price: 200.00, quantity: 5, image: '/noodles.jpeg' },
+        { id: 11, name: 'Washing Powder 1kg', price: 750.00, quantity: 1, image: '/washing.jpeg' },
+        { id: 12, name: 'Ceylon Tea 400g', price: 650.00, quantity: 1, image: '/teaa.jpeg' }
       ]
     }
   ]);

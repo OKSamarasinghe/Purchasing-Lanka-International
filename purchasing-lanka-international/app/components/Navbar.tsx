@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
@@ -12,6 +12,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [cartItems, setCartItems] = useState(3); // Replace with actual cart state
+  const userMenuRef = useRef<HTMLDivElement>(null);
   
   const pathname = usePathname();
 
@@ -31,15 +32,17 @@ export default function Navbar() {
     };
   }, []);
 
-  // Close menus when clicking outside
+  // Close menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = () => {
-      setUserMenuOpen(false);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (userMenuRef.current && !userMenuRef.current.contains(event.target as Node)) {
+        setUserMenuOpen(false);
+      }
     };
     
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
@@ -148,12 +151,9 @@ export default function Navbar() {
           </Link>
 
           {/* User menu */}
-          <div className="relative">
+          <div className="relative" ref={userMenuRef}>
             <button 
-              onClick={(e) => {
-                e.stopPropagation();
-                setUserMenuOpen(!userMenuOpen);
-              }}
+              onClick={() => setUserMenuOpen(!userMenuOpen)}
               className="flex items-center space-x-1 text-white hover:text-gray-300 p-1"
             >
               <FaUser className="text-xl" />
@@ -170,8 +170,7 @@ export default function Navbar() {
                   transition={{ duration: 0.2 }}
                 >
                   <Link href="/profile" className="block px-4 py-2 text-white hover:bg-gray-700">My Profile</Link>
-                  <Link href="/orders" className="block px-4 py-2 text-white hover:bg-gray-700">My Orders</Link>
-                  <Link href="/settings" className="block px-4 py-2 text-white hover:bg-gray-700">Settings</Link>
+                  
                   <div className="border-t border-gray-700 my-1"></div>
                   <Link href="/login" className="block px-4 py-2 text-white hover:bg-gray-700">Sign in</Link>
                   <Link href="/register" className="block px-4 py-2 text-white hover:bg-gray-700">Register</Link>

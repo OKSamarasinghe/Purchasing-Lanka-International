@@ -189,7 +189,7 @@ export default function RegisterPage() {
                     value={formData.fullName}
                     onChange={handleChange}
                     className={`w-full bg-gray-800 text-white pl-10 pr-4 py-2 rounded border ${errors.fullName ? 'border-red-500' : 'border-gray-700'} focus:outline-none focus:border-white`}
-                    placeholder="John Doe"
+                    placeholder="Oshadha Samarasinghe"
                   />
                 </div>
                 {errors.fullName && <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>}

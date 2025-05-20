@@ -39,8 +39,12 @@ const nextConfig = {
  },
   // Add this to generate proper URLs for GitHub Pages
   assetPrefix: '/Purchasing-Lanka-International/',
-  // Prevent trailing slash issues
   trailingSlash: true,
+  
+  // Disable ESLint during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;

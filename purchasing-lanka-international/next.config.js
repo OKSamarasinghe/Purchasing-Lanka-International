@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  output: 'export',  // Enable static exports
+  basePath: '/Purchasing-Lanka-International', // Match your repo name exactly
   images: {
+    unoptimized: true, // Required for static export
     remotePatterns: [
       {
         protocol: 'https',
@@ -34,7 +36,11 @@ const nextConfig = {
         pathname: '/**',
       }
     ],
-  },
+ },
+  // Add this to generate proper URLs for GitHub Pages
+  assetPrefix: '/Purchasing-Lanka-International/',
+  // Prevent trailing slash issues
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
